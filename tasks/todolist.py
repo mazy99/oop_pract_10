@@ -80,7 +80,6 @@ class TodoList:
         return [task for task in self.tasks if task.status == st]
 
     def select_by_priority(self, priority: str) -> list[Task]:
-        """Select tasks by priority."""
         try:
             pri: Priority = Priority[priority.upper()]
         except KeyError:

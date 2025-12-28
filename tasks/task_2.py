@@ -45,7 +45,6 @@ def add(text: str, priority: str, status: str) -> None:
 
 @cli.command(name="list")
 def list_tasks() -> None:
-    """Показать все задачи."""
     todo_list: TodoList = TodoList()
     if os.path.exists("tasks.xml"):
         try:
