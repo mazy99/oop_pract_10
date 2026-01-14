@@ -37,7 +37,7 @@ def main() -> None:
 
                 todo_list.add(text, priority, status)
                 todo_list.save("tasks.xml")
-                print("✓ Задача добавлена.\n")
+                print("Задача добавлена.\n")
 
             elif command == "list":
                 print(todo_list)
@@ -75,19 +75,19 @@ def main() -> None:
             elif command == "sort":
                 todo_list.sort_by_priority()
                 todo_list.save("tasks.xml")
-                print("✓ Задачи отсортированы по приоритету.\n")
+                print("Задачи отсортированы по приоритету.\n")
                 print(todo_list)
                 print()
 
             elif command == "load":
                 load_filename: str = input("Имя XML файла: ").strip()
                 todo_list.load(load_filename)
-                print(f"✓ Данные загружены из {load_filename}\n")
+                print(f"Данные загружены из {load_filename}\n")
 
             elif command == "save":
                 save_filename: str = input("Имя XML файла: ").strip()
                 todo_list.save(save_filename)
-                print(f"✓ Данные сохранены в {save_filename}\n")
+                print(f"Данные сохранены в {save_filename}\n")
 
             else:
                 print(
