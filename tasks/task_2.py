@@ -38,7 +38,7 @@ def add(text: str, priority: str, status: str) -> None:
     try:
         todo_list.add(text, priority, status)
         todo_list.save("tasks.xml")
-        click.echo("✓ Задача добавлена.")
+        click.echo("Задача добавлена.")
     except ValueError as e:
         click.echo(f"Ошибка: {e}", err=True)
 
@@ -119,7 +119,7 @@ def sort() -> None:
     try:
         todo_list.sort_by_priority()
         todo_list.save("tasks.xml")
-        click.echo("✓ Задачи отсортированы по приоритету.")
+        click.echo("Задачи отсортированы по приоритету.")
         click.echo(todo_list)
     except Exception as e:
         click.echo(f"Ошибка: {e}", err=True)
@@ -131,7 +131,7 @@ def load(filename: str) -> None:
     todo_list: TodoList = TodoList()
     try:
         todo_list.load(filename)
-        click.echo(f"✓ Данные загружены из {filename}")
+        click.echo(f"Данные загружены из {filename}")
     except Exception as e:
         click.echo(f"Ошибка: {e}", err=True)
 
@@ -149,7 +149,7 @@ def save(filename: str) -> None:
 
     try:
         todo_list.save(filename)
-        click.echo(f"✓ Данные сохранены в {filename}")
+        click.echo(f"Данные сохранены в {filename}")
     except Exception as e:
         click.echo(f"Ошибка: {e}", err=True)
 
